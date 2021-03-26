@@ -66,18 +66,6 @@ public:
 	int configure(unsigned &baudrate, const GPSConfig &config) override;
 
 private:
-	enum class NMEADecodeFlags : int {
-		got_zda = (1 << 0),
-		got_gga = (1 << 1),
-		got_hdt = (1 << 2),
-		got_gns = (1 << 3),
-		got_rmc = (1 << 4),
-		got_gst = (1 << 5),
-		got_gsa = (1 << 6),
-		got_gsv = (1 << 7),
-		got_vtg = (1 << 8)
-	};
-
 	enum class NMEADecodeState {
 		uninit,
 		got_sync1,
